@@ -10,9 +10,29 @@ document.getElementById('searchButton').addEventListener('click', function () {
           } else if (searchInput.includes('temple')) {
               results += generateResults(data.temples, 'Temples');
           } else if (searchInput.includes('country') || searchInput.includes('countries')) {
-              results += generateResults(data.countries, 'Countries'); 
+              results += generateResults(data.countries, 'Countries');           
           }
-           else {
+  
+          else {
+            const cityArray = [];
+            data.countries.forEach(country => {
+                country.cities.forEach(city => {
+                            if(city.name.toLowerCase().includes(searchInput)) {
+                              cityArray.push(city);                                 
+                            }
+                      });
+            });
+            results += generateResults(cityArray, '');
+        }
+        
+
+
+
+
+
+          if (results == '') {
+            
+
               results = '<p>No matching results found.</p>';
           }
 
@@ -21,7 +41,7 @@ document.getElementById('searchButton').addEventListener('click', function () {
       .catch(error => console.error('Error fetching data:', error));
 });
 
-document.getElementById('clearButton').addEventListener('click', function () {
+  document.getElementById('clearButton').addEventListener('click', function () {
   document.getElementById('searchInput').value = '';
   document.getElementById('homePage').innerHTML = getHomePageContent();
   window.location.hash = 'homePage'; 
@@ -30,7 +50,7 @@ document.getElementById('clearButton').addEventListener('click', function () {
 function generateResults(items, category) {
   let output = `<h2>${category} Results</h2><div class="row g-4 py-5 row-cols-1 row-cols-lg-3">`;
 
-  if (category === 'Countries') {
+  if (category === 'Countries' && 'Cities') {
       items.forEach(country => {
           country.cities.forEach(city => {
               output += generateCard(city.name, city.imageUrl, city.description);
@@ -83,4 +103,3 @@ function getHomePageContent() {
           </div>
       </div>`;
 }
-
