@@ -1,0 +1,169 @@
+section {
+    background-image: url("/travelRecommendation/images/paris2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    position: center;
+    height: 100vh;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+#homePage {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;     
+    margin: 0;
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    h1 {
+        color: rgb(0, 0, 0);
+        font-weight: bolder;
+    }
+   
+}
+
+#aboutUs {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bolder;
+}
+
+#contactUs {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#contactUs h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-left: 450px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: bolder;
+}
+
+#myForm {
+    background-color: rgba(255, 255, 255, 0); 
+    padding: 20px; 
+    border-radius: 8px; 
+    border: 1px solid #ccc; 
+    border-left: 200px;
+    font-weight: bolder;
+}
+
+#myForm input[type="text"],
+#myForm input[type="email"],
+#myForm textarea {
+    background-color: rgba(255, 255, 255, 0); 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    border-radius: 4px; 
+    color: #000; 
+}
+
+#myForm input[type="submit"] {
+    background-color: #007BFF; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card {
+    max-width: 600px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    justify-content: right;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+
+#homePage .justify-content-center {
+    justify-content: center;
+}
+
+
+.search-results-container {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.search-results-container .card {
+    max-width: 300px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.search-results-container .card:hover {
+    transform: scale(1.05);
+}
+
+.search-results-container .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.search-results-container .card-body {
+    padding: 15px;
+}
+
+.search-results-container .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.search-results-container .card-text {
+    font-size: 1rem;
+    color: #555;
+}
